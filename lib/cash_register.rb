@@ -1,4 +1,4 @@
-require 'pry'
+
 class CashRegister
 
   attr_accessor :total, :discount, :last_transaction
@@ -25,7 +25,6 @@ class CashRegister
 
   def apply_discount
     if @discount > 0
-      binding.pry
       @total = @total * (100 - @discount) / 100
       return "After the discount, the total comes to $#{total}."
     else
